@@ -1,0 +1,59 @@
+Q5. Explain the difference between justify-items and justify-self using code examples.
+
+Ans:-
+	In CSS Grid, `justify-items` and `justify-self` are properties used to align grid items along the horizontal axis (inline axis). However, they are used in 	slightly different contexts:
+
+	1. justify-items:
+   		- This property is used to align all grid items within their respective grid tracks along the inline axis (horizontal axis).
+   		- It applies to the entire grid container.
+   		- It sets the alignment for all the grid items unless overridden by `justify-self` for individual items.
+
+	2. justify-self:
+   		- This property is used to align individual grid items within their respective grid cells along the inline axis.
+   		- It applies to individual grid items.
+   		- It allows you to override the alignment set by `justify-items` for specific items.
+
+	Here's an example to illustrate the difference (refer 05_justify.html): 
+
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Justify</title>
+	    <style>
+	        .container{
+	            display: grid;
+	            grid-template-columns: auto auto auto;
+	            border: 1px solid black;
+	            justify-items: center;
+	        }
+
+	        .container > div {
+	            padding: 5px;
+	            background-color: bisque;
+	            border: 1px solid black;
+	        }
+	    </style>
+	</head>
+	<body>
+	    <div class="container">
+	        <div class="box1">Box 1</div>
+	        <div class="box2">Box 2</div>
+	        <div class="box3">Box 3</div>
+	        <div class="box4">Box 4</div>
+	        <div class="box5">Box 5</div>
+	        <div class="box6">Box 6</div>
+	    </div>
+	</body>
+	</html>
+
+
+	In this example:
+
+		You see above grid items arranged center along the inline axis, within their respective grid cells.
+
+		This property allows us to set the default way of justifying each item in their respective grid cells.
+
+	justify-self and align-self properties control the alignment of any specific grid item within its grid cell along the horizontal and vertical axis. 	,respectively.The values can be a start, end, center, or stretch.
